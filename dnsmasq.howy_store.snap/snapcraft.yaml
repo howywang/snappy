@@ -1,0 +1,14 @@
+name: dnsmasq
+version: 1.4
+vendor: Howy Wang <howy.wang@canonical.com>
+summary: dnsmasq for Snappy devices.
+description: dnsmasq provides network infrDnsmasq provides network infrastructure for small networks DNS, DHCP, router advertisement and network boot.
+icon: icon.png
+binaries:
+  dnsmasq:
+    exec: usr/sbin/dnsmasq
+parts:
+  dnsmasq:
+    plugin: nil
+    stage-packages:
+      - dnsmasq

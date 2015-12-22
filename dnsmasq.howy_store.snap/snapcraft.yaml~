@@ -1,0 +1,23 @@
+name: dnsmasq
+version: 1.1
+vendor: Howy Wang <howy.wang@canonical.com>
+summary:  test
+description:  dnsmasq to snap
+icon: icon.png
+binaries:
+  dnsmasq:
+    exec: usr/sbin/dnsmasq
+    security-template: unconfined
+parts:
+  dnsmasq:
+    plugin: nil
+    stage-packages:
+      - dnsmasq
+      - dnsmasq-base
+      - dnsmasq-utils
+      - libmnl0
+      - libnetfilter-conntrack3
+  move:
+    plugin: copy
+    files: 
+      dnsmasq_custom.conf: etc/dnsmasq_custom.conf
