@@ -1,0 +1,18 @@
+name: tree
+version: 1.1
+vendor: Howy Wang <howy.wang@canonical.com>
+summary: tree package for Snappy
+description: Displays an indented directory tree, in color
+icon: tree.png
+binaries:
+  tree:
+    exec: usr/bin/tree
+    security-policy:
+      apparmor: security/apparmor.profile
+      seccomp: security/seccomp.filter
+parts:
+  tree:
+    plugin: nil
+    stage-packages:
+      - tree
+
